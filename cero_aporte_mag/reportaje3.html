@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast - Cero Aporte Mag</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="podcast-theme">
+    <header>
+        <div class="logo">Cero Aporte Mag.</div>
+        <nav>
+            <a href="index.html">Especial</a>
+            <a href="reportaje1.html">Voces</a>
+            <a href="reportaje2.html">Datos</a>
+            <a href="reportaje3.html" class="active">Podcast</a>
+        </nav>
+    </header>
+
+    <article class="report-container">
+        <header class="report-header center">
+            <h1>Cero Aporte Podcast</h1>
+            <p class="lead">Episodio 1: "Nunca es tarde para el pupitre"</p>
+        </header>
+        
+        <div class="podcast-player">
+            <div class="player-cover"></div>
+            <div class="player-controls">
+                <span class="track-title">Educación de Adultos: El Desafío (Trailer)</span>
+                <div class="controls">
+                    <i class="fas fa-backward"></i>
+                    <i class="fas fa-play-circle play-btn"></i>
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+        </div>
+        
+        <div class="content-body">
+            <p>En este primer episodio, debatimos con expertos académicos y autoridades locales sobre el futuro de la nivelación de estudios en Chile. Mientras escuchas, te invitamos a jugar con nuestro glosario interactivo para entender mejor la terminología del sistema.</p>
+            
+            <div class="interactive-module word-game">
+                <h3>Destaques Interactivos: El Glosario</h3>
+                <p>Haz clic en las palabras resaltadas para descubrir su significado y contexto en la política chilena.</p>
+                <div class="game-text">
+                    La <span class="highlight-word" data-def="Educación de Personas Jóvenes y Adultas, modalidad del Mineduc para garantizar el derecho a la educación.">EPJA</span> requiere financiamiento directo. Actualmente, los colegios nocturnos sufren por la baja asistencia, lo que afecta la <span class="highlight-word" data-def="Subvención que entrega el Estado por alumno que efectivamente asiste a clases.">subvención escolar</span>. Además, es necesario revisar los programas de <span class="highlight-word" data-def="Mecanismo que permite a los adultos con oficios certificar sus conocimientos para avanzar niveles educativos.">validación de estudios</span> para que sean acordes a la realidad laboral.
+                </div>
+                <div id="definition-box" class="definition-box">Selecciona un término arriba.</div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Cero Aporte Mag.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

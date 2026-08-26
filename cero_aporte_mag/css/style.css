@@ -1,0 +1,208 @@
+/* Brand Book Type/Code pomelli - Cero Aporte Mag */
+:root {
+    /* Color Palette */
+    --obsidian-black: #1A1817;
+    --pure-white: #FFFFFF;
+    --soft-red: #FF3F20;
+    --warm-greige: #B2B2B2;
+    
+    /* Typography */
+    --font-primary: 'PP Neue Montreal', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-secondary: 'PP Mori', 'Arial', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--obsidian-black);
+    color: var(--pure-white);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Light Theme for Reportaje 1 to contrast */
+body.light-theme {
+    background-color: var(--pure-white);
+    color: var(--obsidian-black);
+}
+
+body.podcast-theme {
+    background-color: #121110;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    border-bottom: 1px solid var(--warm-greige);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: var(--pure-white);
+}
+
+.light-theme .logo { color: var(--obsidian-black); }
+
+nav a {
+    color: var(--warm-greige);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--soft-red);
+    font-weight: bold;
+}
+
+/* Typography */
+h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 1rem; font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--pure-white); }
+h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--soft-red); }
+
+.light-theme h2 { color: var(--obsidian-black); }
+
+p { margin-bottom: 1.5rem; font-size: 1.125rem; color: var(--warm-greige); }
+.light-theme p { color: #333; }
+
+.accent-text { color: var(--soft-red); }
+
+/* Hero */
+.hero {
+    padding: 8rem 5% 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero .tag {
+    display: inline-block;
+    background: var(--soft-red);
+    color: var(--pure-white);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+    margin-bottom: 1.5rem;
+}
+.hero .subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-top: 1.5rem;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 5% 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #22201F;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--soft-red);
+}
+
+.card-img {
+    height: 200px;
+    background: #333;
+}
+.placeholder-img1 { background: linear-gradient(45deg, var(--obsidian-black), #3a3a3a); }
+.placeholder-img2 { background: linear-gradient(45deg, #3a3a3a, var(--soft-red)); }
+.placeholder-img3 { background: linear-gradient(45deg, var(--soft-red), var(--obsidian-black)); }
+
+.card-content { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
+.card-content .category { font-size: 0.8rem; color: var(--soft-red); text-transform: uppercase; margin-bottom: 1rem; }
+.card-content h2 { font-size: 1.5rem; }
+.card-content p { font-size: 1rem; flex-grow: 1; }
+.read-more { color: var(--pure-white); font-weight: bold; font-family: var(--font-secondary); font-size: 0.9rem; }
+.card:hover .read-more { color: var(--soft-red); }
+
+/* Report Pages */
+.report-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 5%;
+}
+.report-header { margin-bottom: 3rem; }
+.report-header.center { text-align: center; }
+.lead { font-size: 1.5rem; color: var(--soft-red); font-weight: 500; }
+.dropcap { float: left; font-size: 4rem; line-height: 0.8; margin-right: 0.5rem; color: var(--soft-red); font-weight: bold; }
+
+/* Interactive Modules */
+.interactive-module {
+    background: #22201F;
+    padding: 2rem;
+    margin: 3rem 0;
+    border-left: 4px solid var(--soft-red);
+}
+.light-theme .interactive-module {
+    background: #F5F5F5;
+    color: var(--obsidian-black);
+}
+
+/* Timeline */
+.timeline-item { margin-bottom: 1rem; padding-left: 2rem; position: relative; border-left: 2px solid var(--warm-greige); cursor: pointer; transition: color 0.3s;}
+.timeline-item::before {
+    content: ''; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px;
+    background: var(--pure-white); border-radius: 50%; transition: background 0.3s;
+}
+.light-theme .timeline-item::before { background: var(--obsidian-black); }
+.timeline-item:hover::before, .timeline-item.active::before { background: var(--soft-red); }
+.timeline-item h4 { color: inherit; }
+.timeline-item p { display: none; font-size: 0.9rem; margin-top: 0.5rem; }
+.timeline-item.active p { display: block; }
+
+/* Card Sorting */
+.sort-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+.sort-card {
+    background: var(--obsidian-black); border: 1px solid var(--warm-greige);
+    padding: 1rem; text-align: center; cursor: pointer; color: var(--pure-white);
+    transition: all 0.3s;
+}
+.sort-card.revealed.desafio { background: #5a1a1a; border-color: var(--soft-red); }
+.sort-card.revealed.politica { background: #1a4a5a; border-color: #3FA0FF; }
+
+/* Podcast Player */
+.podcast-player {
+    display: flex; align-items: center; background: #22201F; padding: 2rem; border-radius: 8px; margin-bottom: 3rem;
+}
+.player-cover { width: 100px; height: 100px; background: var(--soft-red); border-radius: 4px; margin-right: 2rem; }
+.player-controls { flex-grow: 1; }
+.track-title { display: block; font-weight: bold; margin-bottom: 1rem; font-size: 1.2rem; }
+.controls i { font-size: 1.5rem; margin-right: 1.5rem; cursor: pointer; color: var(--pure-white); transition: color 0.3s;}
+.controls i:hover { color: var(--soft-red); }
+.controls .play-btn { font-size: 2.5rem; vertical-align: middle; }
+.progress-bar { height: 4px; background: #333; margin-top: 1.5rem; border-radius: 2px; position: relative; }
+.progress { width: 30%; height: 100%; background: var(--soft-red); border-radius: 2px; }
+
+/* Word Game / Glossary */
+.highlight-word {
+    background-color: rgba(255, 63, 32, 0.2); border-bottom: 2px dashed var(--soft-red);
+    cursor: pointer; padding: 0 4px; transition: background 0.3s;
+}
+.highlight-word:hover, .highlight-word.active { background-color: var(--soft-red); color: var(--pure-white); }
+.definition-box { margin-top: 1.5rem; padding: 1.5rem; background: var(--obsidian-black); border: 1px solid var(--soft-red); font-family: var(--font-secondary); }
+
+footer {
+    text-align: center; padding: 3rem; color: var(--warm-greige); font-size: 0.9rem;
+    border-top: 1px solid #333; margin-top: 4rem;
+}

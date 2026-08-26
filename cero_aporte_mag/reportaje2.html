@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos y Política - Cero Aporte Mag</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Cero Aporte Mag.</div>
+        <nav>
+            <a href="index.html">Especial</a>
+            <a href="reportaje1.html">Voces</a>
+            <a href="reportaje2.html" class="active">Datos</a>
+            <a href="reportaje3.html">Podcast</a>
+        </nav>
+    </header>
+
+    <article class="report-container">
+        <header class="report-header">
+            <h1 class="accent-text">Los números de la deserción y las políticas públicas</h1>
+            <p class="lead">¿Qué dicen las cifras oficiales? Un análisis profundo con fuentes políticas y expertos en educación.</p>
+        </header>
+        
+        <div class="content-body">
+            <p>La educación para jóvenes y adultos (EPJA) en Chile enfrenta un desafío monumental. Para entender el panorama, no basta con las historias personales; es necesario mirar las cifras crudas y las políticas públicas (o la falta de ellas) que configuran este escenario.</p>
+            
+            <div class="interactive-module">
+                <h3>Evolución de la Matrícula Adulta (Interactúa con el gráfico)</h3>
+                <div class="chart-container">
+                    <canvas id="educationChart"></canvas>
+                </div>
+            </div>
+
+            <p>Las autoridades señalan que la pandemia exacerbó la desconexión del sistema, pero los expertos advierten que el problema es estructural. A continuación, clasifica los siguientes conceptos entre "Desafíos" y "Soluciones Propuestas" según las políticas actuales.</p>
+            
+            <div class="interactive-module card-sorting">
+                <h3>Ordena los conceptos (Card Sorting)</h3>
+                <p class="instruction">Haz clic en las tarjetas para descubrir si son un Desafío actual o una Política Propuesta.</p>
+                <div class="sort-grid" id="card-sorting-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Cero Aporte Mag.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
